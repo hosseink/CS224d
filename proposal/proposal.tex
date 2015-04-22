@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{fullpage,graphicx,psfrag,amsmath,amsfonts,verbatim}
+\usepackage[small,bf]{caption}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listings}
+
+\input defs.tex
+
+\bibliographystyle{alpha}
+
+\title{Sentiment Analysis}
+\author{Hossein Karkeh Abad, Milad Sharifi}
+
+\begin{document}
+\maketitle
+
+%\newpage
+%\tableofcontents
+%\newpage
+
+\section*{Project Description}
+The general idea of a sentiment predictor is to polarize reviews for a movie or a product. Most of the sentiment prediction systems treat each sentence as a bag of words and try to assign a positive or negative score to each word in isolation. The main issue with this approach is although a sentence might have positive words, it can actually convey a negative message. A better approach would be to capture the structure of the sentence as well. In [1] a recursive neural network is used to compute the sentiment of a review. In this project we are trying to reproduce the results in the paper and try to come of with new models to further improve the accuracy of the predictor. 
+
+We are using the same data set that is used by the authors which consists of  11,855 single sentences extracted from movie reviews. These reviews are further parsed to extract 215,154 unique phrases and labeled manually. 
+
+Several algorithms for sentiment classification has been studied in [1]. In this project we will first implement these algorithms and then try to alter the existing models to improve the classification performance. 
+
+
+
+\section*{References}
+[1] R. Socher, A. Perelygin, J. Wu, J. Chuang, C. Manning, A. Ng, C. Potts, ÒRecursive Deep Models for Semantic Compositionality Over a Sentiment Treebank, \emph{Conference on Empirical Methods in Natural Language Processing} (EMNLP 2013)
+
+
+\newpage
+\bibliography{template}
+
+\end{document}
